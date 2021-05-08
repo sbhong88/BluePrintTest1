@@ -1,0 +1,80 @@
+@import '../../../../variables.scss';
+@import '../employee-variables.scss';
+
+.employee-input{
+    //border: 1px gray solid;
+    height: $employee-list-height;
+    padding:0;
+    margin:0;
+    .title{
+        margin-left:0;
+        margin-bottom: 10px;
+        height: $employee-list-title-height;
+        :hover{
+            background-color: $employee-select-background-color;
+        }
+        .btn-custom{
+            float:right;
+            border:1px #ced4da solid;
+            border-radius: 500px;
+            font-weight: bold;
+        }
+    }
+    .employee-input-inner{
+        height: $employee-item-height * $employee-item-count - $employee-item-bottom-margin;
+        border:1px $employee-select-background-color solid;
+        background-color: $employee-select-background-color;
+        .employee-input-inner2{
+            height: $employee-item-height * $employee-item-count - $employee-item-bottom-margin - 30px;
+            border:1px $employee-select-background-color solid;
+            margin:15px;
+            background-color: $employee-background-color;
+            .employee-input-inner3{
+                height: $employee-item-height * $employee-item-count - $employee-item-bottom-margin - 30px - ( $employee-input-inner3-margin * 2 ) ;
+                border:1px $employee-background-color solid;
+                margin:$employee-input-inner3-margin;
+                background-color: $employee-background-color;
+                position: relative;
+                .personal-info{
+                    width:100%;
+                    font-size:1.2rem;
+                    font-weight: bold;
+                    margin-bottom: 2em;
+                    span{
+                        border-bottom: 1px grey solid;
+                    }
+                }
+                .input-row{
+                    width:100%;
+                    margin-bottom: $employee-item-bottom-margin;
+                    .label{
+                        display: inline-block;
+                        width:30%;
+                        font-weight: bold;
+                    }
+                    .input-box{
+                        display: inline-block;
+                        width:70%;
+                        input{
+                            width:100%;
+                        }
+                    }
+                }
+                .save-panel{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border:1px #ced4da solid;
+                    width:80px;
+                    text-align: center;
+                    button{
+                        width:80px;
+                    }
+                    :hover{
+                        background-color: $employee-select-background-color;
+                    }
+                }
+            }    
+        }
+    }
+}

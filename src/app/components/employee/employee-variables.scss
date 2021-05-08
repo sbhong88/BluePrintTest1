@@ -1,0 +1,15 @@
+$trash-block-size: 50px;
+$employee-list-title-height: 30px;
+$employee-item-height:60px;
+$employee-item-count:7;
+$employee-item-bottom-margin:10px;
+$employee-list-height: $employee-item-height * $employee-item-count + $employee-list-title-height;
+
+$employee-input-inner3-margin:25px;
+
+$employee-background-color: #FFFEFC; 
+$employee-select-background-color: #F9F5F4;
+$primary-border-color:#F9F5F4;
+$employee-button-background-color:#D2D1D6 ;
+$button-background-color-active:#F9F5F4;
+

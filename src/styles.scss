@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    font-size:14px;
+  }
+  
+  @media screen and (min-width: 300px) {
+    html{
+      font-size:8px;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    html{
+      font-size:11px;
+    }
+  }
+  @media screen and (min-width: 780px) {
+    html{
+      font-size:12px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    html{
+      font-size:14px;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    html{
+      font-size:14px;
+    }
+  }
+
+  

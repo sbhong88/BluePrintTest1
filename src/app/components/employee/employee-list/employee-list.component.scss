@@ -1,0 +1,77 @@
+@import '../../../../variables.scss';
+@import '../employee-variables.scss';
+
+.employee-list{
+    margin:0;
+    padding:0;
+    margin-left:10px;
+    //border: 1px black solid;
+    background-color: $employee-background-color;
+    height: $employee-list-height;
+    .title{
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-left:0;
+        margin-bottom: 10px;
+        height: $employee-list-title-height;
+    }
+    .employee-item{
+        font-size: 1rem;
+        background-color: $employee-background-color;
+        height: $employee-item-height;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding:0;
+        :hover{
+            background-color:$employee-select-background-color;
+        }
+        .employee-item-1{
+            height: $employee-item-height - $employee-item-bottom-margin;
+            background-color: $employee-background-color;
+            margin:0;
+            padding:0;
+            width: 100%;
+            .employee-item-2{
+                height: $employee-item-height - $employee-item-bottom-margin;
+                background-color: $employee-button-background-color;
+                padding:0;
+                margin:0;
+                width: calc( 100% - 10px );
+                display:flex;
+                .emp-name{
+                    flex: 1 0 auto;
+                    text-align: left;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    padding-left:10px;
+                    .emp-name-1{
+                        display: block;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin:0;
+                        padding:0;
+                    }
+                    .emp-position{
+                        display: block;
+                        font-size: 1rem;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .trash{
+                    width:$trash-block-size;
+                    max-width: $trash-block-size;
+                    min-width: $trash-block-size;
+                    text-align: center;
+                    margin:0;
+                    padding:0;
+                    border: 1px black solid;
+                    :hover{
+                        background-color: $employee-select-background-color;
+                    }
+                }
+            }
+        }
+
+    }
+}

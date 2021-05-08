@@ -1,0 +1,35 @@
+<div class="employee-input">
+    <div class="title">
+        <button class="btn btn-default btn-custom" (click)="addNew()">Add new</button>
+    </div>
+    <div class="employee-input-inner">
+        <div class="employee-input-inner2">
+            <div class="employee-input-inner3">
+                <div class="personal-info">
+                    <span>Personal Information</span>
+                </div>
+                <form class="" [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="input-row">
+                        <div class="label">Full Name</div>
+                        <div class="input-box"><input type="text" name="fullname" formControlName="fullname" class="input-1 form-control" /> </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="label">Address</div>
+                        <div class="input-box"><input type="text" name="address" formControlName="address" class="input-1 form-control" /> </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="label">Phone Number</div>
+                        <div class="input-box"><input type="text" name="phone" formControlName="phone" class="input-1 form-control" /> </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="label">Position</div>
+                        <div class="input-box"><input type="text" name="position" formControlName="position" class="input-1 form-control" /> </div>
+                    </div>                    
+                    <div class="save-panel">
+                        <button type="submit" class="btn btn-default save-btn" >Save</button>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>

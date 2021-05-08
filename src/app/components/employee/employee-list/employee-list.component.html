@@ -1,0 +1,21 @@
+<div class="employee-list-div">
+    <div class="employee-list">
+        <div class="title">
+            <label class="label">Employees</label>
+        </div>
+        <div class="employee-item" *ngFor="let emp of employees; let i=index; trackBy:employeeTrack">
+            <div class="employee-item-1">
+                <div class="employee-item-2">
+                    <div class="emp-name" (click)="clickItem(emp)">
+                        <p class="emp-name-1">{{emp.name}}</p>
+                        <p class="emp-position">{{emp.position}}</p>
+                    </div>
+                    <div class="trash" (click)="clickTrash(emp, $event)">
+                        <p>trash</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

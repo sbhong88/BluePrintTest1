@@ -1,0 +1,18 @@
+@import '../../../variables.scss';
+@import './employee-variables.scss';
+.employee-panel{
+    width:100%;
+    max-width: 800px;
+    margin:0;
+    padding:20px;
+    background-color: $employee-background-color;
+    font: $font;
+    .employee-list-panel{
+        margin:0;
+        padding:0;
+    }
+    .employee-input-panel{
+        margin:0;
+        padding:0;
+    }
+}
