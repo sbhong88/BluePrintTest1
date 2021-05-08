@@ -6,6 +6,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeInputComponent } from './components/employee/employee-input/employee-input.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

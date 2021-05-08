@@ -11,7 +11,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~10.2.0",
+    "@angular/animations": "^11.2.13",
+    "@angular/cdk": "^11.2.12",
     "@angular/common": "~10.2.0",
     "@angular/compiler": "~10.2.0",
     "@angular/core": "~10.2.0",
@@ -22,6 +23,7 @@
     "@angular/router": "~10.2.0",
     "bootstrap": "^5.0.0",
     "font-awesome": "^4.7.0",
+    "ngx-mask": "^11.1.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
