@@ -1,0 +1,33 @@
+<div class="dropdown1" style="width:100%">
+    <button  type="button" class="btn btn-default" (click)="dropdownToggleClick()">
+        {{ selectedOption ?selectedOption.title:'' }}
+    </button>
+    <ul  class="dropdown-menu1" *ngIf="showMenu">
+        <li *ngFor="let option of options" (click)="changeSelectedOption(option)">
+            <span class="">
+                {{ option.title }}
+            </span>
+        </li>
+    </ul>
+    <div class="icon">
+        <i class="fa fa-lg fa-caret-left" *ngIf="showMenu"></i>
+        <i class="fa fa-lg fa-caret-down" *ngIf="!showMenu"></i>
+    </div>
+</div>
+
+<!-- <div class="btn-group" dropdown>
+    <button id="button-basic" dropdownToggle type="button" 
+            class="btn btn-primary dropdown-toggle"
+            aria-controls="dropdown-basic">
+              test.......................<span class="caret"></span>
+    </button>
+    
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+      <li role="menuitem" *ngFor="let option of optionsTest">
+        <span class="dropdown-item"> 
+            {{ option }} 
+        </span>
+      </li>
+    </ul>
+  </div> -->

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit,Output, EventEmitter, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { Employee } from 'src/app/model/employee.model';
+import { Employee, PositionList } from 'src/app/model/employee.model';
 
 @Component({
   selector: 'app-employee-list',
@@ -16,10 +16,12 @@ export class EmployeeListComponent implements OnInit, OnChanges {
   selectTrash = new EventEmitter<Employee>();
 
 
-  constructor() { }
+  public positions;
+  constructor() { 
+    this.positions = (new PositionList()).positions;
+  }
 
   ngOnInit(): void {
-
   }
 
   ngOnChanges(change:SimpleChanges){
@@ -45,5 +47,10 @@ export class EmployeeListComponent implements OnInit, OnChanges {
     return null;
   }
 
+  getPosition(positionId){
+    let p = this.positions.find(e=>e.id == positionId);
+    if (p){ return p.title ;}
+    return '';
+  }
 }
 

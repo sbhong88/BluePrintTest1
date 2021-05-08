@@ -7,13 +7,15 @@ import { EmployeeInputComponent } from './components/employee/employee-input/emp
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
+import { CustomDropdownComponent } from './components/employee/custom-dropdown/custom-dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     EmployeeInputComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    CustomDropdownComponent
   ],
   imports: [
     BrowserModule,

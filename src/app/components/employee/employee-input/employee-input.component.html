@@ -14,24 +14,36 @@
                 <form class="" [formGroup]="form" (ngSubmit)="submit()">
                     <div class="input-row">
                         <div class="label">Full Name</div>
-                        <div class="input-box"><input type="text" name="fullname" formControlName="fullname" class="input-1 form-control" /> </div>
+                        <div class="input-box"><input type="text" name="fullname" formControlName="fullname" (focus)="focus()"
+                                class="input-1 form-control" /> </div>
                     </div>
                     <div class="input-row">
                         <div class="label">Address</div>
-                        <div class="input-box"><input type="text" name="address" formControlName="address" class="input-1 form-control" /> </div>
+                        <div class="input-box"><input type="text" name="address" formControlName="address" (focus)="focus()"
+                                class="input-1 form-control" /> </div>
                     </div>
                     <div class="input-row">
                         <div class="label">Phone Number</div>
-                        <div class="input-box"><input type="text" name="phone" formControlName="phone" class="input-1 form-control" mask="(000)000-0000" /> </div>
+                        <div class="input-box"><input type="text" name="phone" formControlName="phone" (focus)="focus()"
+                                class="input-1 form-control" mask="(000)000-0000" /> </div>
                     </div>
-                    <div class="input-row">
+                    <div class="input-row" (click)="focus()">
                         <div class="label">Position</div>
-                        <div class="input-box"><input type="text" name="position" formControlName="position" class="input-1 form-control" /> </div>
+                        <div class="input-box">
+                            <app-custom-dropdown (positionChanged)="positionChanged($event)" [selectId]="selectPositionId"></app-custom-dropdown>
+                        </div>
+                        <!-- <div class="input-box"><input type="text" name="position" formControlName="position" class="input-1 form-control" /> </div> -->
+                    </div>
+                    <div class="input-row errors">
+                        <div class="label"></div>
+                        <div class="input-box" style="color:red">
+                            <p>{{errorMessage}}</p>
+                        </div>
                     </div>                    
                     <div class="save-panel">
-                        <button type="submit" class="btn btn-default save-btn" >Save</button>
+                        <button type="submit" class="btn btn-default save-btn">Save</button>
                     </div>
-                </form> 
+                </form>
             </div>
         </div>
     </div>
