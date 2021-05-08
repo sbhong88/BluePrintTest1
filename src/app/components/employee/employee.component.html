@@ -1,7 +1,7 @@
 <div class="row employee-panel">
-        <app-employee-list class="col-sm-4 employee-list-panel" [employees]="employees"
+        <app-employee-list class="col-sm-5 employee-list-panel" [employees]="employees"
                 (selectedEmployee)="getSelectedEmployee($event)" (selectTrash)="handelTrash($event)">
         </app-employee-list>
-        <app-employee-input class="col-sm-8 employee-input-panel" [selectedEmployee]="selectedEmployee" (updatedEmployee)="updatedEmployee($event)">
+        <app-employee-input class="col-sm-7 employee-input-panel" [selectedEmployee]="selectedEmployee" (updatedEmployee)="updatedEmployee($event)">
         </app-employee-input>
 </div>

@@ -30,8 +30,8 @@ export class EmployeeInputComponent implements OnInit, OnChanges {
   newCreateFromGroup(){
     this.form = new FormGroup({
       id: new FormControl(0, null),
-      fullname: new FormControl('', [Validators.required, Validators.maxLength(this.MAX_USERNAME_LENGTH)]),
-      address: new FormControl('', [Validators.required]),
+      fullname: new FormControl(null, [Validators.required, Validators.maxLength(this.MAX_USERNAME_LENGTH)]),
+      address: new FormControl(null, [Validators.required]),
       phone: new FormControl('', [Validators.required]),
       position: new FormControl('', [Validators.required]),
     });
@@ -39,7 +39,7 @@ export class EmployeeInputComponent implements OnInit, OnChanges {
   selectedCreateFromGroup(){
     this.form = new FormGroup({
       id: new FormControl(this.selectedEmployee.id, null),
-      fullname: new FormControl(this.selectedEmployee.name, [Validators.required, Validators.maxLength(this.MAX_USERNAME_LENGTH)]),
+      fullname: new FormControl(this.selectedEmployee.fullname, [Validators.required, Validators.maxLength(this.MAX_USERNAME_LENGTH)]),
       address: new FormControl(this.selectedEmployee.address, [Validators.required]),
       phone: new FormControl(this.selectedEmployee.phone, [Validators.required]),
       position: new FormControl(this.selectedEmployee.position, [Validators.required]),
@@ -48,7 +48,6 @@ export class EmployeeInputComponent implements OnInit, OnChanges {
 
   submit(){
     var values = this.form.value;
-    values.name = values.fullname;
     this.updatedEmployee.emit(values);
     console.log("Clicked SAVE....", this.form.value);
   }

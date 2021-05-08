@@ -38,5 +38,12 @@ export class EmployeeListComponent implements OnInit, OnChanges {
     return item ? item.id : idx;
   }
 
+  getStyle(emp, from){
+    if(emp.active){
+      return {'background-color':'#F9F5F4'};
+    }
+    return null;
+  }
+
 }
 

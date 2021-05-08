@@ -65,9 +65,11 @@
                     text-align: center;
                     margin:0;
                     padding:0;
-                    border: 1px black solid;
                     :hover{
                         background-color: $employee-select-background-color;
+                    }
+                    i{
+                        margin-top: $employee-item-height / 3;
                     }
                 }
             }
